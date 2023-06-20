@@ -22,7 +22,7 @@ def _exec(repository_ctx, command, cwd = None):
     if cwd:
         origWD = os.getcwd()
         os.chdir(os.path.join(os.path.abspath(sys.path[0]), cwd))
-
+    print("this is a test")
     process = Popen(command, stdout=PIPE, stderr=PIPE)
     result, error = process.communicate()
     if process.returncode != 0:
